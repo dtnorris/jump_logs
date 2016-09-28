@@ -4,5 +4,6 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+Rake.application['default'].prerequisites.delete('spec') if Rake.application['default']
 
 task default: ['spec:frontend', 'spec:units', 'spec:features']
