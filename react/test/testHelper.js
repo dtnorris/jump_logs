@@ -1,14 +1,22 @@
 import { shallow, mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
+import ReactTestUtils from 'react-addons-test-utils';
+import { browserHistory } from 'react-router';
+import { push, syncHistoryWithStore } from 'react-router-redux';
 import $ from 'jquery';
 import 'jasmine-ajax';
+import simulateIfPresent from './support/simulateIfPresent';
 
 Object.assign(global, {
+  browserHistory,
   jasmineEnzyme,
   mount,
+  push,
   React,
   shallow,
+  syncHistoryWithStore,
+  simulateIfPresent,
   $
 });
 
