@@ -1,12 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 const JumpNew = () => {
   return (
     <div>
-      <Link to='/jumps'>Jump Index</Link>
-      <br/>
-      New Jump Form
+      <h1>New Jump</h1>
     </div>
   );
 };
