@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
 
-const JumpForm = (props) => {
-  const { handleSubmit } = props;
-
+const JumpForm = ({ handleSubmit, error }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>Location</label>
@@ -12,7 +10,7 @@ const JumpForm = (props) => {
       </div>
 
       <div>
-        <button type="submit">
+        <button name="button" type="submit">
           Submit
         </button>
       </div>

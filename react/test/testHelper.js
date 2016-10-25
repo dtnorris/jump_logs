@@ -4,7 +4,6 @@ import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import { browserHistory } from 'react-router';
 import { push, syncHistoryWithStore } from 'react-router-redux';
-import $ from 'jquery';
 import 'jasmine-ajax';
 import simulateIfPresent from './support/simulateIfPresent';
 
@@ -16,8 +15,7 @@ Object.assign(global, {
   React,
   shallow,
   syncHistoryWithStore,
-  simulateIfPresent,
-  $
+  simulateIfPresent
 });
 
 beforeEach(() => {
