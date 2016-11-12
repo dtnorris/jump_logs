@@ -3,24 +3,27 @@ import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import { browserHistory } from 'react-router';
-import { push, syncHistoryWithStore } from 'react-router-redux';
-import 'jasmine-ajax';
 import simulateIfPresent from './support/simulateIfPresent';
+import routes from 'routes';
 
 Object.assign(global, {
-  browserHistory,
   jasmineEnzyme,
-  mount,
-  push,
   React,
+  mount,
   shallow,
-  syncHistoryWithStore,
+  browserHistory,
+  routes,
   simulateIfPresent
 });
 
 beforeEach(() => {
   jasmineEnzyme();
+  browserHistory.push('/');
 });
+
+afterEach(() => {
+  browserHistory.push('/');
+})
 
 // function to require all modules for a given context
 let requireAll = requireContext => {
